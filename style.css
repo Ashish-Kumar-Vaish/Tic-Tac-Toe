@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    height: 100vh;
+    background-color: #FEAE6F;
+    background: linear-gradient(180deg, #ffcc6e,#ffdb9a);
+    text-align: center;
+}
+
+h1 {
+
+    color: #01204E;
+    font-size: 10vmin;
+    font-family: 'Satisfy', cursive
+}
+
+#container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.box {
+
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    background-color: #f6dcac00;
+    font-size: 9vmin;
+    color: #77b4bb;
+}
+
+/*tic tac toe lines*/
+#containerForHorizontalLines {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -70vmin;
+    z-index: -1;
+}
+
+#containerForVerticalLines {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -70vmin;
+    z-index: -2;
+}
+
+#horizontal {
+
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+#vertical {
+
+    height: 70vmin;
+    width: 70vmin;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hLine {
+
+    height: 2vmin;
+    width: 100%;
+    background-color: #ffa35d;
+    border-radius: 15px;
+}
+
+.vLine {
+
+    height: 100%;
+    width: 2vmin;
+    background-color: #ffa35d;
+    border-radius: 15px;
+}
+
+.newGame {
+
+    padding: 1.5vmin;
+    margin-top: 3vmin;
+    font-size: 3vmin;
+    font-family: "Concert One", sans-serif;;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffa35d;
+    color: #01204E;
+    font-weight: 600;
+    width: 25vmin;
+}
+
+/*message pop up after game ends*/
+#message {
+
+    color: #01204E;
+    font-size: 5vmin;
+    font-family: "Concert One", sans-serif;;
+    margin-top: -2vmin;
+    margin-bottom: 1vmin;
+}
+
+.messageContainer {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hide {
+
+    visibility: hidden;
+}
+
+/*class for winnig animation*/
+.main {
+    animation: mainAnimate 0.3s ease-in-out 0s 1 normal forwards;
+}
+
+/*class for losing animation*/
+.back {
+    animation: backgroundAnimate 0.3s ease-out 0s 1 normal forwards;
+}
+
+/*winning animation*/
+@keyframes mainAnimate {
+
+    0% {
+
+    }
+    100% {
+        font-size: 15vmin;
+        color: #3f949d;
+    }
+}
+
+/*losing animation*/
+@keyframes backgroundAnimate {
+
+    0% {
+
+    }
+    100% {
+        font-size: 7vmin;
+        color: #8bb0b3;
+    }
+}
